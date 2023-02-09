@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mywiremock
+spec:
+  selector:
+    matchLabels:
+      app: notsure
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app:  notsure
+    spec:
+      containers:
+        - name: wiremockcontainers
+          image: 7204386514/wiremock:myFirst
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080

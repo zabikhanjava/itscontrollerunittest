@@ -1,0 +1,1 @@
+INSERT INTO Customer323232 VALUES (1, 'zabi', 32, 'skp', 2000);
