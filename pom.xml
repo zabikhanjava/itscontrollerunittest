@@ -75,34 +75,12 @@
     </dependencies>
     <build>
         <plugins>
-            <execution>
-                <id>generate {Package Name} payload classes</id>
-                <goals>
-                    <goal>generate</goal>
-                </goals>
-                <configuration>
-                    <schemaDirectory>src/main/resources/{packageFolder}</schemaDirectory>
-                    <bindingDirectory>src/main/resources/{packageFolder}</bindingDirectory>
-                </configuration>
-            </execution>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>16</source>
-                    <target>16</target>
+                    <source>9</source>
+                    <target>9</target>
                 </configuration>
             </plugin>
         </plugins>
